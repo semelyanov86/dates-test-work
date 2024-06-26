@@ -20,6 +20,12 @@
         </div>
     @endif
 
+    @if (session('success'))
+        <div class="bg-green-500 text-white p-4 rounded mb-4">
+            {{ session('success') }}
+        </div>
+    @endif
+
     <form action="{{ route('upload.file') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-4">
@@ -28,6 +34,9 @@
         </div>
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Upload</button>
     </form>
+    <div class="mt-4">
+        <a href="/" class="text-blue-500 underline">See full table</a>
+    </div>
 </div>
 </body>
 </html>
