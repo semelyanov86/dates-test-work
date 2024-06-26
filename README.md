@@ -18,3 +18,7 @@ Laravel (Docker, Laravel echo, redis, mariadb)
 
 Пример файла:
 https://docs.google.com/spreadsheets/d/1BZJ4iV5lEd9GqWu-FsC55zVyGqoAzcqbjXyJyXK2hbs/edit?usp=sharing 
+
+## Installation instruction
+* Copy .env.example to .env and edit connection preferences
+* Run `task run` command to run application in docker.

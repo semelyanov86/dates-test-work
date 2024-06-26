@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  run:
+    desc: "Run project"
+    cmds:
+      - "sudo ./vendor/bin/sail up"
+
+  stop:
+    desc: "Stop project"
+    cmd: "sudo ./vendor/bin/sail down"
