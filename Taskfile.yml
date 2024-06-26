@@ -9,3 +9,16 @@ tasks:
   stop:
     desc: "Stop project"
     cmd: "sudo ./vendor/bin/sail down"
+  test:
+    desc: "Запустить тесты"
+    cmds:
+      - "./vendor/bin/phpunit --colors=always"
+  fix:
+    desc: "Run all fixers"
+    cmds:
+      - "./vendor/bin/pint"
+      - "./vendor/bin/rector process"
+  check:
+    desc: "Run all checkers"
+    cmds:
+      - "./vendor/bin/phpstan analyse --memory-limit=2G"
