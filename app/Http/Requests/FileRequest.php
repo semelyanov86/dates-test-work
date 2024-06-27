@@ -6,7 +6,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-final class FileRequest extends FormRequest
+class FileRequest extends FormRequest
 {
     /**
      * @return array<string, string[]>
