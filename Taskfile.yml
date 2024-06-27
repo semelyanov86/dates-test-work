@@ -22,3 +22,15 @@ tasks:
     desc: "Run all checkers"
     cmds:
       - "./vendor/bin/phpstan analyse --memory-limit=2G"
+  install:
+    desc: "Install application"
+    cmds:
+      - "composer install"
+      - "npm install"
+      - "npm run build"
+      - "php artisan key:generate"
+      - "php artisan storage:link"
+  reverb:
+    desc: "Run reverb application"
+    cmds:
+      - "php artisan reverb:start"

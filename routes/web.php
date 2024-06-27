@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::post('/upload', [UploadController::class, 'upload'])->name('upload.file');
+Route::get('/dates', [\App\Http\Controllers\IndexController::class, 'index'])->name('dates.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

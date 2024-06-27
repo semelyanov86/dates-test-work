@@ -35,7 +35,7 @@
         <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Upload</button>
     </form>
     <div class="mt-4">
-        <a href="/" class="text-blue-500 underline">See full table</a>
+        <a href="{{ route('dates.index') }}" class="text-blue-500 underline">See full table</a>
     </div>
 </div>
 </body>

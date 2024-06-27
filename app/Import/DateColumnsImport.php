@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Import;
 
+use App\Data\DatesData;
+use App\Events\DateImportedEvent;
 use App\Models\Date;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Carbon;
@@ -41,11 +43,14 @@ final class DateColumnsImport implements ShouldQueue, ToModel, WithBatchInserts,
      */
     public function model(array $row): Date
     {
-        return new Date([
+        $date = new Date([
             'id' => (int) $row[0],
             'name' => $row[1],
             'date' => Carbon::parse($row[2]),
         ]);
+        event(new DateImportedEvent(DatesData::from($date)));
+
+        return $date;
     }
 
     /**
