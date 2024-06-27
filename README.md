@@ -21,4 +21,5 @@ https://docs.google.com/spreadsheets/d/1BZJ4iV5lEd9GqWu-FsC55zVyGqoAzcqbjXyJyXK2
 
 ## Installation instruction
 * Copy .env.example to .env and edit connection preferences
+* Run `task install` to install application
 * Run `task run` command to run application in docker.
